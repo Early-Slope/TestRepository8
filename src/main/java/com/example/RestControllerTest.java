@@ -7,9 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RestControllerTest {
 
-	@RequestMapping(value = "/webAccess", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
-        return "hello,Hayasaka!!";
+        return "hello,Hayasaka!! -rootAccess";
+    }
+
+	@RequestMapping(value = "/webAccess", method = RequestMethod.GET)
+	public String index1() {
+        return "hello,Hayasaka!! -webAccess";
     }
 
 }
